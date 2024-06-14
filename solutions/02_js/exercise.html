@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>30 Days Of React Challenge</title>
+  </head>
+
+  <body>
+    <div class="root"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      // To get the root element from the HTML document
+      const rootElement = document.querySelector('.root')
+        const firstName = "Dil"
+        const lastName = "Chhetri"
+        const jsxElement = <h1>{firstName} {lastName}</h1>
+        const country = 'Nepal'
+        const title = 'Engineer'
+        const gender = 'Male'
+        const phone = 23432
+        const personalInfo = {
+            father: 'Dragon',
+            project: 233,
+            likePizza: true,
+            tech: ['html', 'css', 'react'],
+            hobbies: {sport: 'basketball', creativity: 'Art'}
+        }
+        const infoStyle = {background: 'blue'}
+        const myInfo = (
+            <div style={infoStyle}>
+                <h1>{firstName} {lastName}</h1>
+                <p>{country}</p>
+                <p>{title}</p>
+                <p>{gender}</p>
+                <p>{phone}</p>
+                <p>{personalInfo.father}</p>
+                <p>{personalInfo.project}</p>
+                <p>{personalInfo.likePizza}</p>
+                <ul>{personalInfo.tech.map((tech)=><li key={tech}>{tech}</li>)}</ul>
+                <p>Hobbie: {personalInfo.hobbies.sport} {personalInfo.hobbies.creativity}</p>
+
+            </div>
+        )
+        const footerStyle = {background: 'red'}
+        const footer = (
+            <footer style={footerStyle}>
+                <p>Copyright@react</p>
+            </footer>
+        )
+        const style = {background: 'pink'}
+        const app = (
+            <div style={style}>
+            {jsxElement}
+            {myInfo}
+            {footer}
+            </div>
+        )
+
+      // we render the JSX element using the ReactDOM package
+      // ReactDOM has the render method and the render method takes two arguments
+      ReactDOM.render(app, rootElement)
+    </script>
+  </body>
+</html>

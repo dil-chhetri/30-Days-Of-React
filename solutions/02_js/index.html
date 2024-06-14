@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>30 Days Of React Challenge</title>
+  </head>
+
+  <body>
+    <div class="root"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      // To get the root element from the HTML document
+      const rootElement = document.querySelector('.root')
+
+      // JSX element
+    const welcome = 'Welcome to my house'
+    const title = 'Getting  started'
+    const subtitle = 'JavaScript Library'
+    const authorFirstName = 'Dil'
+    const authorLastName = 'Chhetri'
+    const author = {
+        firstName: 'Dil',
+        lastName: 'Chhetri'
+    }
+    const date = 'Oct 5, 1999'
+
+    const header = (
+        <header>
+            <div className="header-wrapper">
+                <h1>{welcome}</h1>
+                <h2>tittle</h2>
+                <h3>{subtitle}</h3>
+                <p>Name: {authorFirstName} {authorLastName}</p>
+                <p>Object Author: {author.firstName} {author.lastName}</p>
+                <small>Date: {date}</small>
+            </div>
+        </header>
+    )
+    
+    const numOne = 3
+    const numTwo = 4
+
+    const result = (
+        <p>{numOne} + {numTwo} = {numOne + numTwo}</p>
+    )
+    const yearBorn = 1239
+    const currentYear = 2024
+    const age = currentYear - yearBorn
+    const personAge = (<p>{age}</p>)
+
+    const tech = ['HTML', 'CSS', 'JavaScript']
+    const techFormatted = tech.map((tech)=><li key={tech}>{tech}</li>)
+   
+    const main = (
+        <main>
+            {result}
+            {personAge}
+            <ul>{techFormatted}</ul>
+        </main>
+    )
+
+    
+    const inputField = (
+        
+        <div>
+            <label htmlFor="firstname">First Name</label>
+            <input type="text" name="" id="firstname" placeholder="First Name"/>
+        </div>
+    )
+
+    const footer = (
+        <footer>
+            <small>this is footer</small>
+        </footer>
+    )
+
+
+    const app = (
+        <div>
+            {header}
+            {main}
+            {title}
+            {inputField}
+            {footer}
+        </div>
+    )
+
+      // we render the JSX element using the ReactDOM package
+      // ReactDOM has the render method and the render method takes two arguments
+      ReactDOM.render(app, rootElement)
+    </script>
+  </body>
+</html>
