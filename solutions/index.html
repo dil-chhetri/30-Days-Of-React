@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>30 Days Of React Challenge</title>
+  </head>
+
+  <body>
+    <div class="root"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      // To get the root element from the HTML document
+        import doSomeMath from './math.js'
+
+        import { addTwo, multiply, subtract} from './math.js'
+
+        import * as everything from './math.js'
+
+        console.log(addTwo(5, 5))
+        console.log(doSomeMath.add(5,10))
+        console.log(everything)
+        
+    </script>
+    
+  </body>
+</html>
