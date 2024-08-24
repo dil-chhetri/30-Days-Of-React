@@ -30,9 +30,9 @@ const inputWithQuirks = (CompParam, name='default') => {
     {
       name: 'react',
       placeholder: 'this is reaact'
-    }
+    },
   ]
-const placeholder = placeholders.find((c)=> c.name === name)
+const {placeholder} = placeholders.find((c)=> c.name === name)
 console.log(placeholder)
 
 const inputPlaceholder = {
